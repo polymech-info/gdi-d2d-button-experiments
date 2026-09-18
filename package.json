@@ -1,0 +1,24 @@
+{
+  "name": "win32-mini-gdi",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Reference Win32 app: borderless layered chrome, GDI+, Direct2D filmstrip, ThorVG SVG buttons.",
+  "scripts": {
+    "configure": "cmake --preset win32-mini-gdi",
+    "configure:debug": "cmake --preset win32-mini-gdi-debug",
+    "build": "cmake --preset win32-mini-gdi && cmake --build --preset win32-mini-gdi",
+    "build:debug": "cmake --preset win32-mini-gdi-debug && cmake --build --preset win32-mini-gdi-debug",
+    "rebuild": "npm run clean && npm run build",
+    "clean": "cmake -E rm -rf build build-debug dist",
+    "start": "dist\\pm-win32-mini-gdi.exe",
+    "run": "dist\\pm-win32-mini-gdi.exe"
+  },
+  "keywords": [
+    "win32",
+    "gdiplus",
+    "direct2d",
+    "layered-window",
+    "reference"
+  ],
+  "license": "MIT"
+}

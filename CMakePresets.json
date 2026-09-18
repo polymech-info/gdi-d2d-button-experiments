@@ -1,0 +1,40 @@
+{
+    "version": 3,
+    "cmakeMinimumRequired": {
+        "major": 3,
+        "minor": 20,
+        "patch": 0
+    },
+    "configurePresets": [
+        {
+            "name": "win32-mini-gdi",
+            "displayName": "Win32 mini GDI (Release)",
+            "description": "Reference Win32 GDI+ / D2D sandbox. Binary: dist/pm-win32-mini-gdi.exe",
+            "binaryDir": "${sourceDir}/build",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release"
+            }
+        },
+        {
+            "name": "win32-mini-gdi-debug",
+            "displayName": "Win32 mini GDI (Debug)",
+            "description": "Debug build. Binary: dist/pm-win32-mini-gdi.exe",
+            "binaryDir": "${sourceDir}/build-debug",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug"
+            }
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "win32-mini-gdi",
+            "configurePreset": "win32-mini-gdi",
+            "configuration": "Release"
+        },
+        {
+            "name": "win32-mini-gdi-debug",
+            "configurePreset": "win32-mini-gdi-debug",
+            "configuration": "Debug"
+        }
+    ]
+}
